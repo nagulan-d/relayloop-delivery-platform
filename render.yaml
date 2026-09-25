@@ -15,6 +15,8 @@ services:
         generateValue: true
       - key: VITE_APP_ID
         sync: false
+      - key: VITE_OAUTH_PORTAL_URL
+        sync: false
       - key: OAUTH_SERVER_URL
         sync: false
       - key: OWNER_OPEN_ID
