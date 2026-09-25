@@ -30,10 +30,6 @@ export const startLogin = () => {
   const redirectUri = getOAuthRedirectUri();
 
   if (!redirectUri) return false;
-  if (!oauthPortalUrl || !appId) {
-    console.error("OAuth is not configured: set VITE_OAUTH_PORTAL_URL and VITE_APP_ID.");
-    return false;
-  }
 
   const nonce = crypto.randomUUID();
   document.cookie = `${OAUTH_STATE_COOKIE}=${nonce}; Path=/; Max-Age=600; SameSite=None; Secure`;
